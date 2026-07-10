@@ -1,0 +1,59 @@
+# nortadesyco.xyz — isolated stack.
+# Separate compose project => own Docker network, so a fault here cannot
+# reach the NDSC portal or EnglishWithSoheila stacks.
+name: nortadesyco
+
+services:
+  api:
+    build:
+      context: ../server
+    restart: unless-stopped
+    env_file: .env
+    # Local testing convenience — production traffic comes via `web`.
+    ports:
+      - "127.0.0.1:8200:8000"
+    mem_limit: 256m
+    pids_limit: 128
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp
+
+  web:
+    build:
+      context: ..
+    restart: unless-stopped
+    depends_on:
+      - api
+    # Production traffic arrives via the shared front Caddy -> web:8080;
+    # bind to localhost only for local testing.
+    ports:
+      - "127.0.0.1:8190:8080"
+    mem_limit: 128m
+    pids_limit: 128
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # Caddy serves static files but writes runtime state to /config and /data.
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /config
+      - /data
+    # `default` reaches `api`; `web-edge` lets the shared front Caddy
+    # reach this container as `nortadesyco-web`.
+    networks:
+      default: {}
+      web-edge:
+        aliases:
+          - nortadesyco-web
+
+networks:
+  # Shared edge network — created once on the server:
+  #   docker network create web-edge
+  web-edge:
+    external: true

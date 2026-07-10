@@ -1,0 +1,36 @@
+# nortadesyco.xyz web container. Listens on unprivileged :8080 so the
+# container can drop all Linux capabilities. The shared front Caddy
+# reverse-proxies nortadesyco.xyz to this service.
+
+# Disable the admin API (:2019) — it has no business being reachable on the
+# shared web-edge network.
+{
+	admin off
+}
+
+:8080 {
+	encode gzip
+
+	# API -> the backend service.
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+
+	# Everything else: the static SPA, with index.html fallback for
+	# client-side routing on deep links / refresh.
+	handle {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		# A Content-Security-Policy is the next hardening step but can break the
+		# SPA if too strict — enable and test in a browser before shipping, e.g.:
+		# Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+	}
+}

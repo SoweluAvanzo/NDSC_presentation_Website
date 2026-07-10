@@ -1,0 +1,10 @@
+node_modules
+dist
+server
+migration
+infra
+.git
+.gitignore
+*.md
+.env
+.env.*
