@@ -40,7 +40,7 @@ function Hero() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Eyebrow */}
-            <div className="text-[#18C5FF] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase">
+            <div className="text-[#18C5FF] text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">
               Research • Software Engineering • Emerging Technologies
             </div>
 
@@ -415,7 +415,7 @@ function Capabilities() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillars.map((p) => (
-            <div key={p.name} className="h-full rounded-xl p-6 bg-[#0a1628]/80 border border-[#18C5FF]/20 hover:bg-[#0a1628] hover:border-[#18C5FF]/40 transition-colors">
+            <div key={p.name} className="h-full rounded-xl p-6 bg-[#0a1628]/80 border border-[#18C5FF]/20 hover:bg-[#0a1628] hover:border-[#18C5FF]/40 hover:-translate-y-1 transition-all duration-200">
               <div className="w-11 h-11 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center mb-4">
                 <p.icon className="w-6 h-6 text-[#18C5FF]" />
               </div>
@@ -516,7 +516,7 @@ function CompetenceAreas() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {areas.map((area) => (
-            <Card key={area.name} className="flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
+            <Card key={area.name} className="flex flex-col p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-200 border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
               <CardHeader className="p-0">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex-shrink-0 p-3 bg-[#18C5FF]/10 rounded-lg">

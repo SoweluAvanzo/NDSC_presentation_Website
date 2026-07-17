@@ -117,7 +117,7 @@ export default function ProjectsPage() {
     return (
         <div className="bg-gradient-to-b from-[#050713] via-[#0a0f1e] to-[#0f1629]">
             {/* Hero */}
-            <div className="pt-24 sm:pt-32">
+            <div className="pt-24 sm:pt-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">
                         Projects, Systems &amp; Research Results

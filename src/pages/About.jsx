@@ -45,7 +45,7 @@ const defiMLTeam = [
 export default function AboutPage() {
   return (
     <div className="bg-gradient-to-b from-[#050713] via-[#0a0f1e] to-[#0f1629]">
-            <div className="pt-24 sm:pt-32">
+            <div className="pt-24 sm:pt-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">About Norta DeSyCo</h1>
@@ -153,7 +153,7 @@ export default function AboutPage() {
                         ].map((p) => (
                             <li
                                 key={p.name}
-                                className="flex h-24 w-44 items-center justify-center rounded-xl bg-white px-6 py-4 shadow-md"
+                                className="flex h-24 w-44 items-center justify-center rounded-xl bg-white px-6 py-4 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
                             >
                                 {p.logo ? (
                                     <img

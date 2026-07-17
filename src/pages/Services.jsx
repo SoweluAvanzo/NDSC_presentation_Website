@@ -133,7 +133,7 @@ export default function ServicesPage() {
                     <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-12">Service Portfolio</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.map((service) => (
-                            <Card key={service.title} className="flex flex-col h-full shadow-lg hover:shadow-xl hover:border-[#18C5FF]/40 transition-all border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
+                            <Card key={service.title} className="flex flex-col h-full shadow-lg hover:shadow-xl hover:border-[#18C5FF]/40 hover:-translate-y-1 transition-all duration-200 border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
                                 <CardHeader className="pb-3">
                                     <div className="w-12 h-12 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center mb-4">
                                         <service.icon className="w-6 h-6 text-[#18C5FF]" />
