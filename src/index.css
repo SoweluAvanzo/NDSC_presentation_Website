@@ -197,3 +197,76 @@ html {
     scroll-behavior: auto;
   }
 }
+
+
+/* ============================================================
+   REDESIGN v2 — "Research Dossier" design system
+   Brand navy + cyan, deepened. Tri-face type. Blueprint signature.
+   ============================================================ */
+:root {
+  --nd-ink: #04060d;
+  --nd-surface: #0a0f1c;
+  --nd-raised: #101728;
+  --nd-cyan: #18c5ff;
+  --nd-blue: #2e6bff;
+  --nd-paper: #e8ecfb;
+  --nd-muted: #8a93b8;
+  --nd-line: rgba(24, 197, 255, 0.14);
+  --nd-line-soft: rgba(136, 147, 184, 0.16);
+  --font-display: 'Space Grotesk Variable', 'Inter Variable', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+.font-mono2   { font-family: var(--font-mono); }
+
+/* Monospace eyebrow/label: the "spec" voice. */
+.nd-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nd-cyan);
+}
+.nd-label--muted { color: var(--nd-muted); }
+
+/* Blueprint grid backdrop — the signature motif. Faint, precise. */
+.nd-grid {
+  background-image:
+    linear-gradient(to right, var(--nd-line-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--nd-line-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.nd-grid-fade {
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* Hairline module (replaces heavy gradient cards). */
+.nd-module {
+  border: 1px solid var(--nd-line);
+  background:
+    linear-gradient(180deg, rgba(16, 23, 40, 0.6), rgba(10, 15, 28, 0.6));
+  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+.nd-module:hover {
+  border-color: rgba(24, 197, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Section corner tick — small engineering crosshair. */
+.nd-tick::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.6rem;
+  border-left: 1px solid var(--nd-cyan);
+  border-top: 1px solid var(--nd-cyan);
+  vertical-align: middle;
+}
+
+/* Animated hero glow. */
+@keyframes nd-pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 0.85; } }
+.nd-glow { animation: nd-pulse 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .nd-glow { animation: none; } }
