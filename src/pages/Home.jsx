@@ -41,7 +41,7 @@ function Hero() {
           <div className="space-y-8">
             {/* Eyebrow */}
             <div className="text-[#18C5FF] text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">
-              Research • Software Engineering • Emerging Technologies
+              Research • Software Engineering • Digital Transformation
             </div>
 
             {/* Main Headline */}

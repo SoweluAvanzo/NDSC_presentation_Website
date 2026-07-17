@@ -235,7 +235,7 @@ function Footer() {
                         &copy; {year} Norta DeSyCo OÜ. All rights reserved.
                     </p>
                     <p className="text-xs tracking-wide text-[#8b90b3]">
-                        Research · Software Engineering · Emerging Technologies
+                        Research · Software Engineering · Digital Transformation
                     </p>
                 </div>
             </div>
