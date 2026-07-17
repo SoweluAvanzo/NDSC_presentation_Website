@@ -97,7 +97,7 @@ function MethodologySection() {
                 <div className="relative p-8 sm:p-12 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] text-white rounded-2xl shadow-xl border border-[#18C5FF]/20">
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-[#F5F7FF]">Research and Industry Applications</h2>
                     <p className="mt-4 text-lg text-[#C3C8E5] max-w-3xl">
-                        Our PhD-backed, model-driven approach for designing and implementing DAOs introduces DAO-ML and ET-DM to specify governance, tokenomics, and trust architectures, enabling automatic smart contract generation. This methodology significantly reduces development time and improves reliability.
+                        Our research-backed, model-driven approach for designing and implementing DAOs introduces DAO-ML and ET-DM to specify governance, tokenomics, and trust architectures, enabling automatic smart contract generation. This methodology significantly reduces development time and improves reliability.
                     </p>
                     <p className="mt-6 text-lg text-[#C3C8E5] max-w-3xl">
                         We are actively applying these and related methods across industry and research, with ongoing projects in key areas such as:

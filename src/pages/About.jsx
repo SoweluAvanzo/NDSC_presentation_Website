@@ -50,7 +50,7 @@ export default function AboutPage() {
                     <div className="lg:text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">About Norta DeSyCo</h1>
                         <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
-                            Norta DeSyCo is a PhD-led research and software-engineering company specializing in trustworthy digital systems. We combine scientific method, advanced software architecture, and practical implementation across blockchain, artificial intelligence, cybersecurity, decentralized identity, autonomous agents, and distributed systems.
+                            Norta DeSyCo is a research-driven software-engineering company specializing in trustworthy digital systems. We combine scientific method, advanced software architecture, and practical implementation across blockchain, artificial intelligence, cybersecurity, decentralized identity, autonomous agents, and distributed systems.
                         </p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                      <div className="relative p-8 sm:p-12 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] rounded-3xl shadow-2xl text-center border border-[#18C5FF]/20">
                         <h2 className="text-3xl font-extrabold text-[#F5F7FF] sm:text-4xl">Our Mission</h2>
                         <blockquote className="mt-8 text-white">
-                           <p className="text-xl font-medium sm:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed text-[#C3C8E5]">To transform advanced research into secure, verifiable, and production-ready digital systems that solve concrete organizational and societal problems.
+                           <p className="text-xl font-medium sm:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed text-[#C3C8E5]">To accelerate trustworthy digital transformation — turning advanced research into secure, verifiable, and production-ready systems that solve concrete organizational and societal problems.
 
           </p>
                         </blockquote>
@@ -90,8 +90,8 @@ export default function AboutPage() {
                             <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                                 {modelDrivenEngineeringTeam.map((person) =>
     <li key={person.name} className="space-y-4">
-                                        <div className="w-full h-40 overflow-hidden bg-[#0a1628] rounded-lg shadow-lg border border-[#18C5FF]/20">
-                                            <img className="w-full h-full object-contain" src={person.imageUrl} alt={`Profile of ${person.name}`} />
+                                        <div className="w-full aspect-square overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
+                                            <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
                                         </div>
                                         <div className="text-lg leading-6 font-medium space-y-1">
                                             <h3 className="text-[#F5F7FF]">{person.name}</h3>
@@ -116,8 +116,8 @@ export default function AboutPage() {
                             <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                                 {defiMLTeam.map((person) =>
     <li key={person.name} className="space-y-4">
-                                        <div className="w-full h-40 overflow-hidden bg-[#0a1628] rounded-lg shadow-lg border border-[#18C5FF]/20">
-                                            <img className="w-full h-full object-contain" src={person.imageUrl} alt={`Profile of ${person.name}`} />
+                                        <div className="w-full aspect-square overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
+                                            <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
                                         </div>
                                         <div className="text-lg leading-6 font-medium space-y-1">
                                             <h3 className="text-[#F5F7FF]">{person.name}</h3>
@@ -146,9 +146,9 @@ export default function AboutPage() {
                     <ul className="flex flex-wrap items-stretch justify-center gap-4 sm:gap-5">
                         {[
                             { name: 'Tallinn University', logo: '/media/partners/tallinn-university.png' },
-                            { name: 'University of Turin', logo: '/media/partners/university-turin.png' },
+                            { name: 'University of Turin', logo: '/media/partners/university-turin.svg' },
                             { name: 'Travelware S.R.L.', logo: '/media/partners/travelware.png' },
-                            { name: 'JSS University, Noida' },
+                            { name: 'JSS University, Noida', logo: '/media/partners/jss-university.png' },
                             { name: 'IEEE Blockchain (Estonia / Finland)' }
                         ].map((p) => (
                             <li

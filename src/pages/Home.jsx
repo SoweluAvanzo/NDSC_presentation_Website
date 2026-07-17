@@ -51,7 +51,7 @@ function Hero() {
 
             {/* Mission Statement */}
             <p className="text-base sm:text-lg text-[#C3C8E5] leading-relaxed max-w-xl">
-              Norta DeSyCo is a PhD-led research and software-engineering company. We design, validate, and implement trustworthy digital systems across blockchain, artificial intelligence, cybersecurity, decentralized identity, and autonomous software — from scientific validation to production.
+              Norta DeSyCo is a research-driven software-engineering company. We design, validate, and implement trustworthy digital systems across blockchain, artificial intelligence, cybersecurity, decentralized identity, and autonomous software — from scientific validation to production.
             </p>
             
             {/* CTA Buttons */}
@@ -436,7 +436,7 @@ function EvidenceStrip() {
     { value: '3,900+', label: 'Research citations' }
   ];
   const tags = [
-    'PhD-led engineering',
+    'Research-driven engineering',
     'International research partnerships',
     'Industry implementations',
     'Europe & UAE operations'
