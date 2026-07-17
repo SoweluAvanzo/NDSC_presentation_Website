@@ -1,93 +1,75 @@
 import { useState } from 'react';
-import { Mail, MapPin, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Mail, MapPin, Linkedin, ArrowUpRight } from 'lucide-react';
 import ConsultationFormModal from '../components/ConsultationFormModal';
 
 export default function ContactPage() {
-    const [consultationModalOpen, setConsultationModalOpen] = useState(false);
-
-    return (
-        <div className="bg-gradient-to-b from-[#050713] via-[#0a0f1e] to-[#0f1629]">
-            <div className="pt-24 sm:pt-28">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="lg:text-center">
-                        <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">Contact Us</h1>
-                        <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
-                            Discuss a software-engineering, research, or emerging-technology project with us. We work with companies, universities, public institutions, investors, and technology ventures on the design, validation, and implementation of trustworthy digital systems.
-                        </p>
-                        <div className="mt-8 flex justify-center">
-                            <Button
-                                onClick={() => setConsultationModalOpen(true)}
-                                size="lg"
-                                className="bg-[#2563FF] hover:bg-[#1d4ed8] text-white rounded-md px-8 py-6 text-base font-semibold shadow-lg shadow-blue-500/30"
-                            >
-                                Start a Project Inquiry
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="py-16 sm:py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-center">
-                        <div className="w-full max-w-2xl bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] p-8 sm:p-12 rounded-2xl shadow-lg border border-[#18C5FF]/20">
-                            <div className="space-y-10">
-                                <h3 className="text-3xl font-bold text-[#F5F7FF] text-center">Our Information</h3>
-                                <div className="flex items-start">
-                                    <Mail className="w-8 h-8 text-[#18C5FF] mt-1 flex-shrink-0" />
-                                    <div className="ml-6 min-w-0">
-                                        <h4 className="text-xl font-semibold text-[#F5F7FF]">Email</h4>
-                                        <p className="text-[#C3C8E5] mt-1">Reach out for projects, research collaborations, and consultations.</p>
-                                        <div className="space-y-2 mt-3">
-                                            <div>
-                                                <span className="text-base text-[#B7BCDB] font-medium">CEO:</span>
-                                                <a href="mailto:alex.norta@nortadesyco.xyz" className="ml-2 text-[#18C5FF] font-medium hover:underline text-base break-words">alex.norta@nortadesyco.xyz</a>
-                                            </div>
-                                            <div>
-                                                <span className="text-base text-[#B7BCDB] font-medium">CTO:</span>
-                                                <a href="mailto:sowelu.avanzo@nortadesyco.xyz" className="ml-2 text-[#18C5FF] font-medium hover:underline text-base break-words">sowelu.avanzo@nortadesyco.xyz</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="border-t border-[#18C5FF]/20"></div>
-                                <div className="flex items-start">
-                                    <Linkedin className="w-8 h-8 text-[#18C5FF] mt-1 flex-shrink-0" />
-                                    <div className="ml-6">
-                                        <h4 className="text-xl font-semibold text-[#F5F7FF]">LinkedIn</h4>
-                                        <p className="text-[#C3C8E5] mt-1">Connect with us professionally.</p>
-                                        <a href="https://www.linkedin.com/company/norta-desyco/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-[#18C5FF] font-medium hover:underline text-base mt-2 inline-block">Visit our LinkedIn page</a>
-                                    </div>
-                                </div>
-                                <div className="border-t border-[#18C5FF]/20"></div>
-                                <div className="flex items-start">
-                                    <MapPin className="w-8 h-8 text-[#18C5FF] mt-1 flex-shrink-0" />
-                                    <div className="ml-6">
-                                        <h4 className="text-xl font-semibold text-[#F5F7FF]">Locations</h4>
-                                        <div className="space-y-4 mt-3">
-                                            <div>
-                                                <p className="text-[#C3C8E5] text-base font-medium">Norta DeSyCo OÜ</p>
-                                                <p className="text-[#C3C8E5] text-base">Tallinn, Estonia</p>
-                                            </div>
-                                            <div>
-                                                <p className="text-[#C3C8E5] text-base font-medium">Norta DeSyCo Limited</p>
-                                                <p className="text-[#C3C8E5] text-base">Jazeera - Al Riffa</p>
-                                                <p className="text-[#C3C8E5] text-base">Ras Al Khaimah, United Arab Emirates</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <ConsultationFormModal
-                open={consultationModalOpen}
-                onOpenChange={setConsultationModalOpen}
-            />
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="bg-[#ECEAE2]">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-20">
+        <div className="mx-auto max-w-[88rem] px-5 sm:px-8">
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF3B14]">Contact</div>
+          <h1 className="font-brk mt-6 max-w-4xl text-5xl font-bold leading-[0.92] tracking-[-0.02em] text-[#121216] sm:text-7xl lg:text-8xl">
+            Let’s discuss your project.
+          </h1>
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-[#413F38] sm:text-xl">
+            Discuss a software-engineering, research, or emerging-technology project with us. We work with
+            companies, universities, public institutions, investors, and technology ventures on the design,
+            validation, and implementation of trustworthy digital systems.
+          </p>
+          <div className="mt-10">
+            <button onClick={() => setOpen(true)} className="group inline-flex items-center gap-2 rounded-full bg-[#FF3B14] px-8 py-4 text-base font-semibold text-white transition-transform hover:scale-[1.03]">
+              Start a project inquiry
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </button>
+          </div>
         </div>
-    );
+      </section>
+
+      <section className="pb-24">
+        <div className="mx-auto max-w-[88rem] px-5 sm:px-8">
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#121216]/15 bg-[#121216]/15 md:grid-cols-3">
+            <div className="bg-[#ECEAE2] p-8">
+              <Mail className="h-6 w-6 text-[#FF3B14]" />
+              <div className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#5A574E]">Email</div>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#8b877c]">CEO</div>
+                  <a href="mailto:alex.norta@nortadesyco.xyz" className="font-medium text-[#121216] hover:text-[#FF3B14] break-words">alex.norta@nortadesyco.xyz</a>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#8b877c]">CTO</div>
+                  <a href="mailto:sowelu.avanzo@nortadesyco.xyz" className="font-medium text-[#121216] hover:text-[#FF3B14] break-words">sowelu.avanzo@nortadesyco.xyz</a>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#ECEAE2] p-8">
+              <Linkedin className="h-6 w-6 text-[#FF3B14]" />
+              <div className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#5A574E]">LinkedIn</div>
+              <p className="mt-4 text-[#5A574E]">Connect with us professionally.</p>
+              <a href="https://www.linkedin.com/company/norta-desyco/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 font-semibold text-[#FF3B14] hover:underline">
+                Visit our page <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="bg-[#ECEAE2] p-8">
+              <MapPin className="h-6 w-6 text-[#FF3B14]" />
+              <div className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#5A574E]">Locations</div>
+              <div className="mt-4 space-y-4 text-sm">
+                <div>
+                  <div className="font-semibold text-[#121216]">Norta DeSyCo OÜ</div>
+                  <div className="text-[#5A574E]">Tallinn, Estonia</div>
+                </div>
+                <div>
+                  <div className="font-semibold text-[#121216]">Norta DeSyCo Limited</div>
+                  <div className="text-[#5A574E]">Jazeera - Al Riffa, Ras Al Khaimah, UAE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ConsultationFormModal open={open} onOpenChange={setOpen} />
+    </div>
+  );
 }

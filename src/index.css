@@ -197,3 +197,39 @@ html {
     scroll-behavior: auto;
   }
 }
+
+
+/* ============================================================
+   REDESIGN v3 — "SIGNAL": bold editorial · concrete + electric
+   Light warm-neutral base, heavy ink, electric vermilion.
+   Display = Bricolage Grotesque. Body = Inter.
+   ============================================================ */
+:root {
+  --v3-bone:   #ECEAE2;   /* warm concrete base */
+  --v3-bone2:  #E3E0D6;   /* slightly deeper panel */
+  --v3-ink:    #121216;   /* near-black */
+  --v3-signal: #FF3B14;   /* electric vermilion */
+  --v3-blue:   #2E43D6;   /* brand blue (ties to logo) */
+  --v3-muted:  #5A574E;   /* muted on light */
+  --v3-mutedd: #ABA79C;   /* muted on ink */
+  --v3-line:   rgba(18,18,22,0.16);
+  --font-brk:  'Bricolage Grotesque Variable', 'Inter Variable', sans-serif;
+}
+.font-brk { font-family: var(--font-brk); font-optical-sizing: auto; }
+
+/* Kinetic marquee (signature motion). Track is duplicated; move by -50%. */
+@keyframes v3-marq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.v3-marquee { display: inline-flex; flex: none; min-width: 100%; will-change: transform; animation: v3-marq 34s linear infinite; }
+.v3-marquee--rev { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) { .v3-marquee { animation: none; } }
+
+/* Underline reveal for big text links. */
+.v3-link { background-image: linear-gradient(var(--v3-signal), var(--v3-signal)); background-size: 0% 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease; }
+.v3-link:hover { background-size: 100% 2px; }
+
+/* Card lift. */
+.v3-lift { transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+.v3-lift:hover { transform: translateY(-4px); }
+
+/* Visible keyboard focus on the electric palette. */
+.v3-focus:focus-visible { outline: 2px solid var(--v3-signal); outline-offset: 3px; }
