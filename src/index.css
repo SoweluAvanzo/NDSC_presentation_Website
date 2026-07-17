@@ -197,3 +197,62 @@ html {
     scroll-behavior: auto;
   }
 }
+
+
+/* ============================================================
+   REDESIGN v4 — "AURORA": premium web3 dark
+   Deep canvas · cyan→violet gradients · glassmorphism · glow.
+   Display = Sora. Body = Inter.
+   ============================================================ */
+:root {
+  --v4-bg: #06070E;
+  --v4-text: #EAF0FF;
+  --v4-muted: #92A0BD;
+  --v4-border: rgba(255,255,255,0.09);
+  --v4-cyan: #22D3EE;
+  --v4-blue: #3B82F6;
+  --v4-violet: #A855F7;
+  --font-sora: 'Sora Variable', 'Inter Variable', sans-serif;
+}
+.font-sora { font-family: var(--font-sora); letter-spacing: -0.02em; }
+
+/* Gradient text (cyan → sky → violet). */
+.v4-grad {
+  background: linear-gradient(100deg, #67E8F9 0%, #38BDF8 42%, #A855F7 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Glass surface. */
+.v4-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  border: 1px solid var(--v4-border);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.v4-glass:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56,189,248,0.45);
+  box-shadow: 0 24px 70px -24px rgba(56,189,248,0.35);
+}
+
+/* Gradient CTA. */
+.v4-btn {
+  background: linear-gradient(100deg, #22D3EE, #3B82F6 55%, #8B5CF6);
+  box-shadow: 0 10px 34px -10px rgba(59,130,246,0.65);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.v4-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 16px 46px -10px rgba(139,92,246,0.7); }
+
+/* Aurora blobs (ambient motion). */
+@keyframes v4-float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(28px,-22px) scale(1.1); } }
+.v4-blob { position: absolute; border-radius: 9999px; filter: blur(96px); pointer-events: none; animation: v4-float 16s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .v4-blob { animation: none; } }
+
+/* Faint tech grid + gradient hairline. */
+.v4-grid { background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 58px 58px; }
+.v4-hair { height: 1px; background: linear-gradient(90deg, transparent, rgba(56,189,248,0.45), rgba(168,85,247,0.35), transparent); }
+
+/* Gradient ring for icon chips. */
+.v4-chip { background: linear-gradient(160deg, rgba(34,211,238,0.18), rgba(168,85,247,0.14)); border: 1px solid rgba(255,255,255,0.12); }
+
+.v4-focus:focus-visible { outline: 2px solid #38BDF8; outline-offset: 3px; }
