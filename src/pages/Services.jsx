@@ -1,186 +1,136 @@
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Button } from '@/components/ui/button';
 import {
-    Boxes, Network, Code, TrendingUp, Brain, Shield, Cloud, Fingerprint,
-    Bot, FlaskConical, SearchCheck, Cpu, Palette, Shapes, TestTube, CheckCircle
+  Boxes, Network, Code, TrendingUp, Brain, Shield, Cloud, Fingerprint,
+  Bot, FlaskConical, SearchCheck, Cpu, Palette, Shapes, TestTube, ArrowUpRight, CheckCircle,
 } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
-// Twelve-service portfolio. DAO / DeFi remain distinctive specializations
-// inside a broader research-and-engineering offering.
-const services = [
-    {
-        title: 'Blockchain Strategy & Decentralized-System Architecture',
-        icon: Boxes,
-        description: 'Feasibility, architecture, and technology selection for blockchain and decentralized systems — from first principles to a build-ready design.'
-    },
-    {
-        title: 'DAO Engineering, Governance & Token-Economy Design',
-        icon: Network,
-        description: 'Model-driven design and validation of DAO governance and tokenomics using our DAO-ML and ET-DM languages, with technical groundwork for regulatory alignment delivered alongside qualified legal partners.'
-    },
-    {
-        title: 'Model-Driven Smart-Contract & Blockchain Development',
-        icon: Code,
-        description: 'Visual specification of on-chain logic translated to gas-efficient, tested Solidity through automated code generation — validated in peer-reviewed work and live client platforms.'
-    },
-    {
-        title: 'DeFi, Digital Assets & Algorithmic Market Systems',
-        icon: TrendingUp,
-        description: 'Protocol design, risk modeling, on-chain analytics, and algorithmic trading systems for decentralized finance and digital-asset markets.'
-    },
-    {
-        title: 'Artificial Intelligence & Machine-Learning Engineering',
-        icon: Brain,
-        description: 'Applied ML, explainable AI, anomaly detection, NLP pipelines, and edge/TinyML — designed for trustworthy, production-grade deployment.'
-    },
-    {
-        title: 'Cybersecurity & Resilient Digital-System Design',
-        icon: Shield,
-        description: 'Threat modeling, formal verification, and resilience engineering that keep governance and software systems secure under adversarial and crisis conditions.'
-    },
-    {
-        title: 'Software Engineering, Cloud & Distributed Platforms',
-        icon: Cloud,
-        description: 'Full-stack software engineering, cloud-native architecture, and distributed platforms — taking systems from prototype to reliable production.'
-    },
-    {
-        title: 'Decentralized Identity & Digital-Trust Solutions',
-        icon: Fingerprint,
-        description: 'Self-sovereign identity, DIDs and verifiable credentials, and configurable challenge-response authentication for real-world-asset and inter-organizational trust.'
-    },
-    {
-        title: 'AI Agent Engineering & Autonomous Business Systems',
-        icon: Bot,
-        description: 'Multi-agent systems, agent orchestration, and autonomous business workflows with governance and accountability designed in from the start.'
-    },
-    {
-        title: 'Research & Innovation Project Development',
-        icon: FlaskConical,
-        description: 'Consortium formation, proposal development, and design-science research that turn ideas into funded, publishable, and deployable outcomes.'
-    },
-    {
-        title: 'Blockchain Security, Verification & Technical Due Diligence',
-        icon: SearchCheck,
-        description: 'Independent smart-contract review, formal verification, and technical due diligence for ventures, investors, and integrators.'
-    },
-    {
-        title: 'Custom Research & Emerging-Technology Labs',
-        icon: Cpu,
-        description: 'Dedicated applied-research engagements that explore, prototype, and validate emerging technologies against your specific problem.'
-    },
-];
-
-const techServices = [
-    {
-        title: 'Visual Editor for DAO design and code generation (DAO-ML)',
-        icon: Palette,
-        description: 'Leverage our visual editor to model DAO architectures with DAO-ML and automatically generate the underlying smart contracts.'
-    },
-    {
-        title: 'Token Economy Design Language (ET-DM)',
-        icon: Shapes,
-        description: 'Utilize our Extended Trusted DApp Modeling language to formally specify and verify tokenomics and trust parameters.'
-    },
-    {
-        title: 'Test Generation Framework for DAOs',
-        icon: TestTube,
-        description: 'An automated framework for generating comprehensive test suites to validate the organizational structures and governance rules of your DAO.'
-    },
-];
-
-function MethodologySection() {
-    return (
-         <div className="py-20 sm:py-28">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="relative p-8 sm:p-12 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] text-white rounded-2xl shadow-xl border border-[#18C5FF]/20">
-                    <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-[#F5F7FF]">Research and Industry Applications</h2>
-                    <p className="mt-4 text-lg text-[#C3C8E5] max-w-3xl">
-                        Our research-backed, model-driven approach for designing and implementing DAOs introduces DAO-ML and ET-DM to specify governance, tokenomics, and trust architectures, enabling automatic smart contract generation. This methodology significantly reduces development time and improves reliability.
-                    </p>
-                    <p className="mt-6 text-lg text-[#C3C8E5] max-w-3xl">
-                        We are actively applying these and related methods across industry and research, with ongoing projects in key areas such as:
-                    </p>
-                    <ul className="mt-4 grid gap-2 sm:grid-cols-2 text-[#C3C8E5] max-w-4xl">
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Knowledge Graphs &amp; NLP:</strong> Turning raw text into governed, structured economic data.</span></li>
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Healthcare:</strong> Privacy-preserving health-data integration.</span></li>
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Destination Management:</strong> Innovating in the tourism sector.</span></li>
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Ethical &amp; Trustworthy AI:</strong> Auditability, governance, and privacy for AI systems.</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    );
+function Eyebrow({ children, muted }) {
+  return <div className={`nd-label nd-tick ${muted ? 'nd-label--muted' : ''}`}>{children}</div>;
 }
 
+const SERVICES = [
+  { tag: 'BLK', icon: Boxes, title: 'Blockchain Strategy & Decentralized-System Architecture', desc: 'Feasibility, architecture, and technology selection for blockchain and decentralized systems — from first principles to a build-ready design.' },
+  { tag: 'DAO', icon: Network, title: 'DAO Engineering, Governance & Token-Economy Design', desc: 'Model-driven design and validation of DAO governance and tokenomics with our DAO-ML and ET-DM languages, with technical groundwork for regulatory alignment delivered alongside qualified legal partners.' },
+  { tag: 'BLK', icon: Code, title: 'Model-Driven Smart-Contract & Blockchain Development', desc: 'Visual specification of on-chain logic translated to gas-efficient, tested Solidity through automated code generation — validated in peer-reviewed work and live client platforms.' },
+  { tag: 'DEFI', icon: TrendingUp, title: 'DeFi, Digital Assets & Algorithmic Market Systems', desc: 'Protocol design, risk modeling, on-chain analytics, and algorithmic trading systems for decentralized finance and digital-asset markets.' },
+  { tag: 'AI', icon: Brain, title: 'Artificial Intelligence & Machine-Learning Engineering', desc: 'Applied ML, explainable AI, anomaly detection, NLP pipelines, and edge/TinyML — designed for trustworthy, production-grade deployment.' },
+  { tag: 'SEC', icon: Shield, title: 'Cybersecurity & Resilient Digital-System Design', desc: 'Threat modeling, formal verification, and resilience engineering that keep governance and software systems secure under adversarial and crisis conditions.' },
+  { tag: 'SW', icon: Cloud, title: 'Software Engineering, Cloud & Distributed Platforms', desc: 'Full-stack software engineering, cloud-native architecture, and distributed platforms — taking systems from prototype to reliable production.' },
+  { tag: 'ID', icon: Fingerprint, title: 'Decentralized Identity & Digital-Trust Solutions', desc: 'Self-sovereign identity, DIDs and verifiable credentials, and configurable challenge-response authentication for real-world-asset and inter-organizational trust.' },
+  { tag: 'AGT', icon: Bot, title: 'AI Agent Engineering & Autonomous Business Systems', desc: 'Multi-agent systems, agent orchestration, and autonomous business workflows with governance and accountability designed in from the start.' },
+  { tag: 'RSCH', icon: FlaskConical, title: 'Research & Innovation Project Development', desc: 'Consortium formation, proposal development, and design-science research that turn ideas into funded, publishable, and deployable outcomes.' },
+  { tag: 'DD', icon: SearchCheck, title: 'Blockchain Security, Verification & Technical Due Diligence', desc: 'Independent smart-contract review, formal verification, and technical due diligence for ventures, investors, and integrators.' },
+  { tag: 'LAB', icon: Cpu, title: 'Custom Research & Emerging-Technology Labs', desc: 'Dedicated applied-research engagements that explore, prototype, and validate emerging technologies against your specific problem.' },
+];
+
+const TECH = [
+  { title: 'Visual Editor for DAO design (DAO-ML)', icon: Palette, desc: 'Model DAO architectures with DAO-ML and automatically generate the underlying smart contracts.' },
+  { title: 'Token Economy Design Language (ET-DM)', icon: Shapes, desc: 'Formally specify and verify tokenomics and trust parameters with our Extended Trusted DApp Modeling language.' },
+  { title: 'Test Generation Framework for DAOs', icon: TestTube, desc: 'Automatically generate comprehensive test suites that validate a DAO’s organizational structures and governance rules.' },
+];
+
+const APPLICATIONS = [
+  { k: 'Knowledge Graphs & NLP', v: 'Turning raw text into governed, structured economic data.' },
+  { k: 'Decentralized Healthcare', v: 'Privacy-preserving health-data integration.' },
+  { k: 'Destination Management', v: 'Decentralized governance for the tourism sector.' },
+  { k: 'Ethical & Trustworthy AI', v: 'Auditability, governance, and privacy for AI systems.' },
+];
+
 export default function ServicesPage() {
-    return (
-        <div className="bg-gradient-to-b from-[#050713] via-[#0a0f1e] to-[#0f1629]">
-            <div className="pt-24 sm:pt-28">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                     <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">
-                        Our Capabilities
-                    </h1>
-                    <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
-                        A full-spectrum research-and-engineering portfolio — from blockchain, AI, and cybersecurity to software, cloud, and applied research. Every engagement is backed by named expertise, published methods, and delivered projects.
-                    </p>
-                </div>
-            </div>
-
-            <div className="py-16 sm:py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-12">Service Portfolio</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {services.map((service) => (
-                            <Card key={service.title} className="flex flex-col h-full shadow-lg hover:shadow-xl hover:border-[#18C5FF]/40 hover:-translate-y-1 transition-all duration-200 border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
-                                <CardHeader className="pb-3">
-                                    <div className="w-12 h-12 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center mb-4">
-                                        <service.icon className="w-6 h-6 text-[#18C5FF]" />
-                                    </div>
-                                    <CardTitle className="text-lg font-bold text-[#F5F7FF] leading-snug">{service.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <p className="text-sm text-[#B7BCDB] leading-relaxed">{service.description}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-                    <div className="mt-12 text-center">
-                        <Button asChild size="lg" className="bg-[#2563FF] hover:bg-[#1d4ed8] text-white rounded-md px-8 py-6 text-base font-semibold">
-                            <Link to={createPageUrl('Contact')}>Discuss a Project</Link>
-                        </Button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="bg-gradient-to-b from-[#0f1629] to-[#131b35] py-20 sm:py-28">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-4">Proprietary Technologies</h2>
-                    <p className="text-lg text-[#C3C8E5] text-center max-w-3xl mx-auto mb-12">
-                        Tooling we have built to make model-driven DAO and DApp engineering faster and more reliable.
-                    </p>
-                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {techServices.map((service) => (
-                             <Card key={service.title} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] border border-[#18C5FF]/20">
-                                <CardHeader>
-                                    <div className="flex justify-between items-center">
-                                        <CardTitle className="text-base font-bold text-[#F5F7FF]">{service.title}</CardTitle>
-                                         <div className="p-2 bg-[#18C5FF]/10 rounded-lg flex-shrink-0 ml-4">
-                                            <service.icon className="w-6 h-6 text-[#18C5FF]"/>
-                                        </div>
-                                    </div>
-                                </CardHeader>
-                                <CardContent className="flex-grow">
-                                    <p className="text-sm text-[#C3C8E5]">{service.description}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            <MethodologySection />
+  return (
+    <div className="bg-[#04060d]">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="nd-grid nd-grid-fade absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-5 pt-36 pb-14 sm:px-8 sm:pt-40 sm:pb-16">
+          <Eyebrow>Capabilities</Eyebrow>
+          <h1 className="font-display mt-6 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight text-[#E8ECFB] sm:text-5xl lg:text-6xl">
+            A full-spectrum research-and-engineering portfolio
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#8A93B8]">
+            From blockchain, AI, and cybersecurity to software, cloud, and applied research. Every
+            engagement is backed by named expertise, published methods, and delivered projects.
+          </p>
         </div>
-    );
+      </section>
+
+      {/* 12-service grid */}
+      <section className="border-t border-[#18C5FF]/10">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <Eyebrow muted>Service portfolio · 12 offerings</Eyebrow>
+          <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[#18C5FF]/15 bg-[#18C5FF]/10 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((s, i) => (
+              <div key={i} className="group bg-[#04060d] p-7 transition-colors hover:bg-[#0a0f1c]">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#18C5FF]/25 bg-[#18C5FF]/10">
+                    <s.icon className="h-5 w-5 text-[#18C5FF]" />
+                  </div>
+                  <span className="font-mono2 text-xs tracking-[0.15em] text-[#5b6488]">{s.tag}</span>
+                </div>
+                <h3 className="font-display mt-5 text-base font-semibold leading-snug text-[#E8ECFB]">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#8A93B8]">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <button className="hidden" aria-hidden="true" />
+            <Link to={createPageUrl('Contact')} className="group inline-flex items-center gap-2 rounded-md bg-[#18C5FF] px-6 py-3 text-sm font-semibold text-[#04060d] transition-colors hover:bg-[#5bd6ff]">
+              Discuss a Project
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Proprietary technologies */}
+      <section className="border-t border-[#18C5FF]/10 bg-[#0a0f1c]">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+          <Eyebrow>Proprietary technologies</Eyebrow>
+          <h2 className="font-display mt-5 max-w-3xl text-3xl font-bold tracking-tight text-[#E8ECFB] sm:text-4xl">
+            Tooling that makes model-driven engineering faster
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {TECH.map((t) => (
+              <div key={t.title} className="nd-module rounded-xl p-7">
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#18C5FF]/25 bg-[#18C5FF]/10">
+                  <t.icon className="h-5 w-5 text-[#18C5FF]" />
+                </div>
+                <h3 className="font-display mt-5 text-base font-semibold text-[#E8ECFB]">{t.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#8A93B8]">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research & industry applications */}
+      <section className="border-t border-[#18C5FF]/10">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+            <div>
+              <Eyebrow>Research &amp; industry applications</Eyebrow>
+              <h2 className="font-display mt-5 text-3xl font-bold tracking-tight text-[#E8ECFB] sm:text-4xl">
+                Methods proven in the field
+              </h2>
+              <p className="mt-5 leading-relaxed text-[#8A93B8]">
+                Our research-backed, model-driven approach introduces DAO-ML and ET-DM to specify
+                governance, tokenomics, and trust architectures, enabling automatic smart-contract
+                generation — reducing development time and improving reliability. We apply these and
+                related methods across active industry and research projects.
+              </p>
+            </div>
+            <div className="divide-y divide-[#18C5FF]/10 border-t border-[#18C5FF]/10 lg:border-t-0">
+              {APPLICATIONS.map((a) => (
+                <div key={a.k} className="py-5">
+                  <div className="font-display text-base font-semibold text-[#E8ECFB]">{a.k}</div>
+                  <div className="mt-1 text-sm text-[#8A93B8]">{a.v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
