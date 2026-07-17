@@ -7,7 +7,7 @@ import ConsultationFormModal from './components/ConsultationFormModal';
 
 const navigation = [
     { name: 'Home', href: createPageUrl('Home') },
-    { name: 'Consulting Services', href: createPageUrl('Services') },
+    { name: 'Services', href: createPageUrl('Services') },
     { name: 'Projects', href: createPageUrl('Projects') },
     { name: 'About', href: createPageUrl('About') },
     { name: 'Contact', href: createPageUrl('Contact') },
@@ -152,10 +152,10 @@ function Footer() {
                             alt="Norta DeSyCo"
                             className="h-14 w-auto"
                         />
-                        <p className="mt-5 max-w-sm text-sm leading-relaxed text-[#A5AAC9]">
-                            Engineering trustworthy decentralized systems — DAO governance, tokenomics,
-                            and DeFi — bridging rigorous academic research with production-ready
-                            implementation.
+                        <p className="mt-5 max-w-sm text-sm leading-relaxed text-[#B7BCDB]">
+                            Research-driven software engineering for trustworthy digital systems —
+                            blockchain, AI, cybersecurity, decentralized identity, and autonomous
+                            software, from scientific validation to production implementation.
                         </p>
                         <div className="mt-6 flex items-center gap-3">
                             <a
@@ -206,7 +206,7 @@ function Footer() {
                                 <Mail className="h-4 w-4 mt-0.5 text-[#18C5FF] flex-shrink-0" />
                                 <a
                                     href="mailto:alex.norta@nortadesyco.xyz"
-                                    className="text-[#A5AAC9] hover:text-[#18C5FF] transition-colors break-all"
+                                    className="text-[#B7BCDB] hover:text-[#18C5FF] transition-colors break-words"
                                 >
                                     alex.norta@nortadesyco.xyz
                                 </a>
@@ -215,7 +215,7 @@ function Footer() {
                                 <Mail className="h-4 w-4 mt-0.5 text-[#18C5FF] flex-shrink-0" />
                                 <a
                                     href="mailto:sowelu.avanzo@nortadesyco.xyz"
-                                    className="text-[#A5AAC9] hover:text-[#18C5FF] transition-colors break-all"
+                                    className="text-[#B7BCDB] hover:text-[#18C5FF] transition-colors break-words"
                                 >
                                     sowelu.avanzo@nortadesyco.xyz
                                 </a>
@@ -234,8 +234,8 @@ function Footer() {
                     <p className="text-sm text-[#A5AAC9]">
                         &copy; {year} Norta DeSyCo OÜ. All rights reserved.
                     </p>
-                    <p className="text-xs tracking-wide text-[#6b7194]">
-                        DAO · DeFi · Decentralized System Consulting
+                    <p className="text-xs tracking-wide text-[#8b90b3]">
+                        Research · Software Engineering · Emerging Technologies
                     </p>
                 </div>
             </div>

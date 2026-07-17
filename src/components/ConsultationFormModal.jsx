@@ -133,10 +133,11 @@ export default function ConsultationFormModal({ open, onOpenChange }) {
                     <SelectValue placeholder="Select a service" className="text-white" />
                   </SelectTrigger>
                   <SelectContent className="bg-[#0a1628] border-[#18C5FF]/30">
-                    <SelectItem value="dao_development" className="text-white focus:bg-[#18C5FF] focus:text-black">Complete DAO Launch & MiCA Compliance</SelectItem>
-                    <SelectItem value="fintech_consulting" className="text-white focus:bg-[#18C5FF] focus:text-black">Training & Workshops</SelectItem>
-                    <SelectItem value="governance" className="text-white focus:bg-[#18C5FF] focus:text-black">Governance & Token Economy Design</SelectItem>
-                    <SelectItem value="market_analysis" className="text-white focus:bg-[#18C5FF] focus:text-black">Crypto Market Analysis & Trading</SelectItem>
+                    <SelectItem value="blockchain_dao" className="text-white focus:bg-[#18C5FF] focus:text-black">Blockchain, DAO &amp; Digital Trust</SelectItem>
+                    <SelectItem value="ai_ml" className="text-white focus:bg-[#18C5FF] focus:text-black">AI &amp; Machine Learning</SelectItem>
+                    <SelectItem value="cybersecurity" className="text-white focus:bg-[#18C5FF] focus:text-black">Cybersecurity &amp; Verification</SelectItem>
+                    <SelectItem value="software_cloud" className="text-white focus:bg-[#18C5FF] focus:text-black">Software, Cloud &amp; Distributed Systems</SelectItem>
+                    <SelectItem value="research_innovation" className="text-white focus:bg-[#18C5FF] focus:text-black">Research, Innovation &amp; Due Diligence</SelectItem>
                     <SelectItem value="other" className="text-white focus:bg-[#18C5FF] focus:text-black">Other</SelectItem>
                   </SelectContent>
                 </Select>

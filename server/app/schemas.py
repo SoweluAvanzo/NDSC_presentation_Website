@@ -3,7 +3,9 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
-_SERVICES = "dao_development|fintech_consulting|governance|market_analysis|other"
+_SERVICES = (
+    "blockchain_dao|ai_ml|cybersecurity|software_cloud|research_innovation|other"
+)
 
 
 class ConsultationIn(BaseModel):

@@ -49,8 +49,8 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">About Norta DeSyCo</h1>
-                        <p className="mt-4 max-w-2xl mx-auto text-xl text-[#C3C8E5]">
-                            We are a collective of computer scientists and finance experts dedicated to advancing the frontiers of decentralized systems.
+                        <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
+                            Norta DeSyCo is a PhD-led research and software-engineering company specializing in trustworthy digital systems. We combine scientific method, advanced software architecture, and practical implementation across blockchain, artificial intelligence, cybersecurity, decentralized identity, autonomous agents, and distributed systems.
                         </p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                      <div className="relative p-8 sm:p-12 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] rounded-3xl shadow-2xl text-center border border-[#18C5FF]/20">
                         <h2 className="text-3xl font-extrabold text-[#F5F7FF] sm:text-4xl">Our Mission</h2>
                         <blockquote className="mt-8 text-white">
-                           <p className="text-xl font-medium sm:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed text-[#C3C8E5]">To empower developers and communities with the strategic and technical tools required to build more secure, transparent and efficient and decentralized governance infrastructures and financial systems.
+                           <p className="text-xl font-medium sm:text-2xl lg:text-3xl max-w-4xl mx-auto leading-relaxed text-[#C3C8E5]">To transform advanced research into secure, verifiable, and production-ready digital systems that solve concrete organizational and societal problems.
 
           </p>
                         </blockquote>
@@ -74,8 +74,8 @@ export default function AboutPage() {
                     <div className="space-y-16">
                         <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none text-center">
                             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-[#F5F7FF]">Meet The Team</h2>
-                            <p className="text-xl text-[#C3C8E5]">
-                                Our strength lies in our deep technical knowledge of software and socio-economic systems.
+                            <p className="text-xl text-[#C3C8E5] max-w-3xl mx-auto">
+                                A core team of owners and permanent engineers, extended by a network of research fellows and associated specialists across AI, data science, and blockchain — so we can scale delivery without diluting expertise.
                             </p>
                         </div>
 
@@ -131,6 +131,35 @@ export default function AboutPage() {
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* Partners & Collaborators */}
+            <div className="py-20 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-[#F5F7FF]">Partners &amp; Collaborators</h2>
+                        <p className="mt-3 text-lg text-[#C3C8E5] max-w-3xl mx-auto">
+                            We deliver alongside universities, public institutions, and industry — the partners behind our funded research and applied projects.
+                        </p>
+                    </div>
+                    <ul className="flex flex-wrap items-stretch justify-center gap-4">
+                        {[
+                            'Tallinn University (BFM)',
+                            'Estonian Ministry of Economic Affairs (MKM)',
+                            'University of Torino',
+                            'JSS University, Noida',
+                            'Travelware S.R.L.',
+                            'IEEE Blockchain (Estonia / Finland)'
+                        ].map((partner) => (
+                            <li
+                                key={partner}
+                                className="flex items-center rounded-xl border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] px-5 py-4 text-sm font-medium text-[#C3C8E5]"
+                            >
+                                {partner}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>);

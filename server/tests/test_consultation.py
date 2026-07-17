@@ -9,7 +9,7 @@ _VALID = {
     "name": "Jane Founder",
     "email": "jane@example.com",
     "company": "Acme DAO",
-    "service_interest": "dao_development",
+    "service_interest": "blockchain_dao",
     "message": "We need help launching a MiCA-compliant DAO.",
 }
 

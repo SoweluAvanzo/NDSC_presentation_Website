@@ -1,65 +1,74 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Code, Shield, CheckCircle, Brain, TrendingUp, Palette, Shapes, TestTube, ShieldAlert } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+    Boxes, Network, Code, TrendingUp, Brain, Shield, Cloud, Fingerprint,
+    Bot, FlaskConical, SearchCheck, Cpu, Palette, Shapes, TestTube, CheckCircle
+} from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
-const consultingServices = [
+// Twelve-service portfolio. DAO / DeFi remain distinctive specializations
+// inside a broader research-and-engineering offering.
+const services = [
     {
-        title: 'Complete DAO Launch Consulting & MiCA Compliance',
-        icon: Shield,
-        description: 'End-to-end support for launching tokens and DAOs with full regulatory compliance. We guide you through every stage from initial concept to market deployment, ensuring your project meets MiCA requirements and international regulatory standards while maintaining technical excellence and economic sustainability.',
-        highlights: [
-            'Token economy design and launch strategy modeling',
-            'MiCA regulatory compliance and legal framework alignment',
-            'Comprehensive governance architecture development',
-            'Post-launch monitoring and optimization services'
-        ]
+        title: 'Blockchain Strategy & Decentralized-System Architecture',
+        icon: Boxes,
+        description: 'Feasibility, architecture, and technology selection for blockchain and decentralized systems — from first principles to a build-ready design.'
     },
     {
-        title: 'Formal Verification and Governance Structures Crisis Response',
-        icon: ShieldAlert,
-        description: 'In an era of increasing governance complexity and security threats, resilient systems are essential. We provide advanced formal verification and multi-agent simulation services to ensure governance structures remain secure, operational, and effective during both routine operations and emergency scenarios. Our expertise in DAO-based governance frameworks demonstrates how decentralized systems can strengthen the resilience and security of organizational and societal governance structures against sophisticated attacks and crisis situations.',
-        highlights: [
-            'Multi-agent simulation of governance attacks',
-            'Evaluation of existing governance process security and resilience against malevolent attacks',
-            'Governance threat detection',
-            'Formal modeling and verification to ensure security and resilience of governance system against complex governance attacks'
-        ]
+        title: 'DAO Engineering, Governance & Token-Economy Design',
+        icon: Network,
+        description: 'Model-driven design and validation of DAO governance and tokenomics using our DAO-ML and ET-DM languages, with technical groundwork for regulatory alignment delivered alongside qualified legal partners.'
     },
     {
-        title: 'Training & Workshops on DAO and DeFi Markets',
-        icon: Brain,
-        description: 'Comprehensive educational programs designed to empower your team with cutting-edge knowledge in DAO development and DeFi market systems. Our expert-led workshops combine theoretical foundations with hands-on practical implementation, ensuring participants gain both deep understanding and actionable skills in decentralized governance and finance.',
-        highlights: [
-            'DAO design and deployment workshops',
-            'DeFi protocol development and integration training',
-            'DeFi market analysis',
-            'Custom team training programs and consultations'
-        ]
+        title: 'Model-Driven Smart-Contract & Blockchain Development',
+        icon: Code,
+        description: 'Visual specification of on-chain logic translated to gas-efficient, tested Solidity through automated code generation — validated in peer-reviewed work and live client platforms.'
     },
     {
-        title: 'Governance and Token Economy Design & Verification',
-        icon: CheckCircle,
-        description: 'We adopt formal methods to validate blockchain-based decentralized governance models. Our systematic approach ensures that your governance mechanisms and tokenomics are mathematically sound, economically sustainable, and aligned with your organizational goals.',
-        highlights: [
-            'Formal governance model validation',
-            'Token economy mathematical modeling',
-            'Incentive mechanism design and verification',
-            'Economic sustainability analysis'
-        ]
-    },
-    {
-        title: 'Crypto Market Analysis & Automated Trading Systems',
+        title: 'DeFi, Digital Assets & Algorithmic Market Systems',
         icon: TrendingUp,
-        description: 'We combine advanced market analytics with sophisticated algorithmic trading solutions. Leveraging data science, on-chain analytics, and automated trading strategies, we help clients navigate cryptocurrency markets with intelligence and precision.',
-        highlights: [
-            'Real-time on-chain data analysis and market forecasting',
-            'Custom algorithmic trading strategy development',
-            'Predictive analytics for tokenomics',
-            'Risk management and performance optimization frameworks'
-        ]
+        description: 'Protocol design, risk modeling, on-chain analytics, and algorithmic trading systems for decentralized finance and digital-asset markets.'
+    },
+    {
+        title: 'Artificial Intelligence & Machine-Learning Engineering',
+        icon: Brain,
+        description: 'Applied ML, explainable AI, anomaly detection, NLP pipelines, and edge/TinyML — designed for trustworthy, production-grade deployment.'
+    },
+    {
+        title: 'Cybersecurity & Resilient Digital-System Design',
+        icon: Shield,
+        description: 'Threat modeling, formal verification, and resilience engineering that keep governance and software systems secure under adversarial and crisis conditions.'
+    },
+    {
+        title: 'Software Engineering, Cloud & Distributed Platforms',
+        icon: Cloud,
+        description: 'Full-stack software engineering, cloud-native architecture, and distributed platforms — taking systems from prototype to reliable production.'
+    },
+    {
+        title: 'Decentralized Identity & Digital-Trust Solutions',
+        icon: Fingerprint,
+        description: 'Self-sovereign identity, DIDs and verifiable credentials, and configurable challenge-response authentication for real-world-asset and inter-organizational trust.'
+    },
+    {
+        title: 'AI Agent Engineering & Autonomous Business Systems',
+        icon: Bot,
+        description: 'Multi-agent systems, agent orchestration, and autonomous business workflows with governance and accountability designed in from the start.'
+    },
+    {
+        title: 'Research & Innovation Project Development',
+        icon: FlaskConical,
+        description: 'Consortium formation, proposal development, and design-science research that turn ideas into funded, publishable, and deployable outcomes.'
+    },
+    {
+        title: 'Blockchain Security, Verification & Technical Due Diligence',
+        icon: SearchCheck,
+        description: 'Independent smart-contract review, formal verification, and technical due diligence for ventures, investors, and integrators.'
+    },
+    {
+        title: 'Custom Research & Emerging-Technology Labs',
+        icon: Cpu,
+        description: 'Dedicated applied-research engagements that explore, prototype, and validate emerging technologies against your specific problem.'
     },
 ];
 
@@ -91,13 +100,13 @@ function MethodologySection() {
                         Our PhD-backed, model-driven approach for designing and implementing DAOs introduces DAO-ML and ET-DM to specify governance, tokenomics, and trust architectures, enabling automatic smart contract generation. This methodology significantly reduces development time and improves reliability.
                     </p>
                     <p className="mt-6 text-lg text-[#C3C8E5] max-w-3xl">
-                        We are actively applying these methods in both industry and research, with ongoing projects in key areas such as:
+                        We are actively applying these and related methods across industry and research, with ongoing projects in key areas such as:
                     </p>
-                    <ul className="mt-4 space-y-2 text-[#C3C8E5] max-w-3xl">
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Science (DeSci):</strong> Creating new models for collaborative, transparent research.</span></li>
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Healthcare:</strong> Developing secure data management systems.</span></li>
+                    <ul className="mt-4 grid gap-2 sm:grid-cols-2 text-[#C3C8E5] max-w-4xl">
+                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Knowledge Graphs &amp; NLP:</strong> Turning raw text into governed, structured economic data.</span></li>
+                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Healthcare:</strong> Privacy-preserving health-data integration.</span></li>
                         <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Decentralized Destination Management:</strong> Innovating in the tourism sector.</span></li>
-                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Public Administration:</strong> Facilitating participatory budgeting with DAOs.</span></li>
+                        <li className="flex items-start"><CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-1 flex-shrink-0" /><span><strong>Ethical &amp; Trustworthy AI:</strong> Auditability, governance, and privacy for AI systems.</span></li>
                     </ul>
                 </div>
             </div>
@@ -108,62 +117,49 @@ function MethodologySection() {
 export default function ServicesPage() {
     return (
         <div className="bg-gradient-to-b from-[#050713] via-[#0a0f1e] to-[#0f1629]">
-            <div className="pt-24 sm:pt-32">
+            <div className="pt-24 sm:pt-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                      <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">
-                        Consulting Services
+                        Our Capabilities
                     </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-xl text-[#C3C8E5]">
-                        From complete DAO launches to specialized training, we provide comprehensive support for advancing decentralized systems and finance.
+                    <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
+                        A full-spectrum research-and-engineering portfolio — from blockchain, AI, and cybersecurity to software, cloud, and applied research. Every engagement is backed by named expertise, published methods, and delivered projects.
                     </p>
                 </div>
             </div>
 
-            <div className="py-20 sm:pb-28">
+            <div className="py-16 sm:py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-12">Our Complete Service Portfolio</h2>
-                    <div className="space-y-12">
-                        {consultingServices.map((service, index) => (
-                            <Card key={service.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow border-2 border-[#18C5FF]/30 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
-                                <div className="grid md:grid-cols-3 gap-8">
-                                    <div className="md:col-span-2 p-8">
-                                        <CardHeader className="p-0 mb-6">
-                                            <div className="flex items-center gap-4 mb-4">
-                                                <div className="p-3 rounded-lg bg-[#18C5FF]/10">
-                                                    <service.icon className="w-8 h-8 text-[#18C5FF]"/>
-                                                </div>
-                                                <CardTitle className="text-xl font-bold text-[#F5F7FF]">
-                                                    {service.title}
-                                                </CardTitle>
-                                            </div>
-                                        </CardHeader>
-                                        <CardContent className="p-0">
-                                            <p className="text-[#C3C8E5] text-lg leading-relaxed">
-                                                {service.description}
-                                            </p>
-                                        </CardContent>
+                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-12">Service Portfolio</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {services.map((service) => (
+                            <Card key={service.title} className="flex flex-col h-full shadow-lg hover:shadow-xl hover:border-[#18C5FF]/40 transition-all border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
+                                <CardHeader className="pb-3">
+                                    <div className="w-12 h-12 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center mb-4">
+                                        <service.icon className="w-6 h-6 text-[#18C5FF]" />
                                     </div>
-                                    <div className="p-8 bg-[#0a0f1e]/50">
-                                        <h4 className="font-semibold text-[#F5F7FF] mb-4">Key Capabilities:</h4>
-                                        <ul className="space-y-3">
-                                            {service.highlights.map((highlight, idx) => (
-                                                <li key={idx} className="flex items-start text-sm">
-                                                    <CheckCircle className="w-4 h-4 mr-3 mt-0.5 flex-shrink-0 text-[#18C5FF]" />
-                                                    <span className="text-[#C3C8E5]">{highlight}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
+                                    <CardTitle className="text-lg font-bold text-[#F5F7FF] leading-snug">{service.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <p className="text-sm text-[#B7BCDB] leading-relaxed">{service.description}</p>
+                                </CardContent>
                             </Card>
                         ))}
+                    </div>
+                    <div className="mt-12 text-center">
+                        <Button asChild size="lg" className="bg-[#2563FF] hover:bg-[#1d4ed8] text-white rounded-md px-8 py-6 text-base font-semibold">
+                            <Link to={createPageUrl('Contact')}>Discuss a Project</Link>
+                        </Button>
                     </div>
                 </div>
             </div>
 
             <div className="bg-gradient-to-b from-[#0f1629] to-[#131b35] py-20 sm:py-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-12">Technologies</h2>
+                    <h2 className="text-3xl font-extrabold text-[#F5F7FF] text-center mb-4">Proprietary Technologies</h2>
+                    <p className="text-lg text-[#C3C8E5] text-center max-w-3xl mx-auto mb-12">
+                        Tooling we have built to make model-driven DAO and DApp engineering faster and more reliable.
+                    </p>
                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {techServices.map((service) => (
                              <Card key={service.title} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] border border-[#18C5FF]/20">

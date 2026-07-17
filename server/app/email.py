@@ -11,10 +11,11 @@ log = logging.getLogger("ndsc.email")
 _RESEND_ENDPOINT = "https://api.resend.com/emails"
 
 _SERVICE_LABELS = {
-    "dao_development": "Complete DAO Launch & MiCA Compliance",
-    "fintech_consulting": "Training & Workshops",
-    "governance": "Governance & Token Economy Design",
-    "market_analysis": "Crypto Market Analysis & Trading",
+    "blockchain_dao": "Blockchain, DAO & Digital Trust",
+    "ai_ml": "AI & Machine Learning",
+    "cybersecurity": "Cybersecurity & Verification",
+    "software_cloud": "Software, Cloud & Distributed Systems",
+    "research_innovation": "Research, Innovation & Due Diligence",
     "other": "Other",
 }
 

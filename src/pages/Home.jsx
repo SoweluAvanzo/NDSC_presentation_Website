@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { ArrowRight, Brain, BarChart, CheckCircle, PenTool, TestTube, TrendingUp, Users, Award, Globe, Shield, Network, Building2 } from 'lucide-react';
+import { ArrowRight, Brain, BarChart, CheckCircle, PenTool, TestTube, TrendingUp, Users, Award, Globe, Shield, Network, Building2, Boxes, Code, Bot, FlaskConical } from 'lucide-react';
 import ConsultationFormModal from '../components/ConsultationFormModal';
 
 function Hero() {
@@ -41,17 +41,17 @@ function Hero() {
           <div className="space-y-8">
             {/* Eyebrow */}
             <div className="text-[#18C5FF] text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase">
-              DAO • DeFi • <span className="normal-case">DE</span>centralized <span className="normal-case">SY</span>stem <span className="normal-case">CO</span>nsulting
+              Research • Software Engineering • Emerging Technologies
             </div>
-            
+
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#F5F7FF] leading-tight max-w-xl">
-              Engineering Trustworthy Decentralized Systems
+              Engineering Trustworthy Digital Systems
             </h1>
-            
+
             {/* Mission Statement */}
             <p className="text-base sm:text-lg text-[#C3C8E5] leading-relaxed max-w-xl">
-              Empowering developers and communities with strategic and technical tools to build secure, transparent, and efficient decentralized governance infrastructures and financial systems.
+              Norta DeSyCo is a PhD-led research and software-engineering company. We design, validate, and implement trustworthy digital systems across blockchain, artificial intelligence, cybersecurity, decentralized identity, and autonomous software — from scientific validation to production.
             </p>
             
             {/* CTA Buttons */}
@@ -62,17 +62,17 @@ function Hero() {
                 className="bg-[#2563FF] hover:bg-[#1d4ed8] text-white rounded-md px-8 py-6 text-base font-semibold shadow-lg shadow-blue-500/30 transition-all duration-200"
               >
                 <Link to={createPageUrl('Contact')}>
-                  Schedule a Consultation
+                  Discuss a Project
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 variant="outline"
                 className="bg-transparent border-[#555B7C] text-white hover:bg-[#555B7C]/20 rounded-md px-8 py-6 text-base font-semibold transition-all duration-200"
               >
                 <Link to={createPageUrl('Services')}>
-                  Explore Our Services
+                  Explore Our Capabilities
                 </Link>
               </Button>
             </div>
@@ -83,29 +83,29 @@ function Hero() {
                 <div className="w-10 h-10 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center">
                   <Shield className="w-5 h-5 text-[#18C5FF]" />
                 </div>
-                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">Secure by Design</h3>
-                <p className="text-[#A5AAC9] text-xs sm:text-sm leading-relaxed">
-                  Model-driven engineering, formal verification, and proof-backed architectures.
+                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">Research-Driven Engineering</h3>
+                <p className="text-[#B7BCDB] text-xs sm:text-sm leading-relaxed">
+                  Peer-reviewed methods, formal verification, and proof-backed architectures.
                 </p>
               </div>
-              
+
               <div className="space-y-3">
                 <div className="w-10 h-10 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-[#18C5FF]" />
+                  <Brain className="w-5 h-5 text-[#18C5FF]" />
                 </div>
-                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">Governance You Can Trust</h3>
-                <p className="text-[#A5AAC9] text-xs sm:text-sm leading-relaxed">
-                  DAO and on-chain governance frameworks designed for accountability.
+                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">AI &amp; Autonomous Systems</h3>
+                <p className="text-[#B7BCDB] text-xs sm:text-sm leading-relaxed">
+                  Machine learning, explainable AI, and multi-agent automation built for real deployments.
                 </p>
               </div>
-              
+
               <div className="space-y-3">
                 <div className="w-10 h-10 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center">
                   <Network className="w-5 h-5 text-[#18C5FF]" />
                 </div>
-                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">DeFi Protocol Infrastructure</h3>
-                <p className="text-[#A5AAC9] text-xs sm:text-sm leading-relaxed">
-                  Protocol design, review, and risk assessment for decentralized finance.
+                <h3 className="text-[#F5F7FF] font-bold text-sm sm:text-base">Blockchain &amp; Digital Trust</h3>
+                <p className="text-[#B7BCDB] text-xs sm:text-sm leading-relaxed">
+                  DAO governance, smart contracts, decentralized identity, and DeFi — engineered for accountability.
                 </p>
               </div>
             </div>
@@ -366,31 +366,37 @@ function Hero() {
   );
 }
 
-function ConsultingUnits() {
-  const units = [
+function Capabilities() {
+  const pillars = [
     {
-      name: 'Trustworthy DAO Development Unit',
-      icon: Brain,
-      description: 'Specializing in the architectural design, formal verification, and implementation of robust and secure Decentralized Autonomous Organizations.',
-      services: [
-        'Model-Driven DAO Development',
-        'Governance & Token Economy Design',
-        'Automated Smart Contract Generation',
-        'Formal Verification & Validation'
-      ],
-      link: createPageUrl('Services')
+      name: 'Blockchain & Decentralized Systems',
+      icon: Boxes,
+      description: 'Architecture, DAO governance, smart-contract engineering, tokenomics, and DeFi — from design to audited implementation.'
     },
     {
-      name: 'Decentralized Finance Research Unit',
-      icon: TrendingUp,
-      description: 'Focused on creating and analyzing financial technologies for the DeFi ecosystem.',
-      services: [
-        'Crypto Market Analysis',
-        'Algorithmic Trading Systems',
-        'DeFi Risk Management Frameworks',
-        'Predictive Analytics for Tokenomics'
-      ],
-      link: createPageUrl('Services')
+      name: 'Artificial Intelligence & Machine Learning',
+      icon: Brain,
+      description: 'Applied ML, explainable AI, anomaly detection, NLP pipelines, and edge/TinyML for production environments.'
+    },
+    {
+      name: 'Software Engineering & Cloud',
+      icon: Code,
+      description: 'Full-stack development, model-driven engineering, distributed platforms, and cloud-native delivery.'
+    },
+    {
+      name: 'Cybersecurity, Identity & Digital Trust',
+      icon: Shield,
+      description: 'Threat modeling, formal verification, decentralized identity (DID/VC), and challenge-response authentication.'
+    },
+    {
+      name: 'Autonomous Agents & Automation',
+      icon: Bot,
+      description: 'Multi-agent systems, agent orchestration, and autonomous business workflows with governance built in.'
+    },
+    {
+      name: 'Research, Innovation & Validation',
+      icon: FlaskConical,
+      description: 'Technical due diligence, consortium and proposal development, and scientific validation of emerging technology.'
     }
   ];
 
@@ -398,46 +404,134 @@ function ConsultingUnits() {
     <div className="bg-gradient-to-b from-[#0a0f1e] to-[#0f1629] py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <h2 className="text-base text-[#18C5FF] font-semibold tracking-wide uppercase">What We Do</h2>
+          <p className="mt-2 text-3xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-4xl">
+            Capabilities Across the Digital-Systems Stack
+          </p>
+          <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
+            One team, from scientific method to production system — with DAO and DeFi engineering as a distinctive specialization inside a broader capability set.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pillars.map((p) => (
+            <div key={p.name} className="h-full rounded-xl p-6 bg-[#0a1628]/80 border border-[#18C5FF]/20 hover:bg-[#0a1628] hover:border-[#18C5FF]/40 transition-colors">
+              <div className="w-11 h-11 rounded-lg bg-[#18C5FF]/10 flex items-center justify-center mb-4">
+                <p.icon className="w-6 h-6 text-[#18C5FF]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F5F7FF] mb-2">{p.name}</h3>
+              <p className="text-sm text-[#B7BCDB] leading-relaxed">{p.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EvidenceStrip() {
+  const items = [
+    'PhD-led engineering',
+    'Peer-reviewed methods',
+    'International research partnerships',
+    'Industry implementations',
+    'Europe & UAE operations'
+  ];
+  return (
+    <div className="bg-[#0f1629] border-y border-[#18C5FF]/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+          {items.map((item, i) => (
+            <li key={item} className="flex items-center gap-3">
+              {i > 0 && <span className="hidden sm:inline text-[#18C5FF]/40" aria-hidden="true">•</span>}
+              <span className="text-sm font-medium tracking-wide text-[#C3C8E5]">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function CompetenceAreas() {
+  const areas = [
+    {
+      name: 'Blockchain, DAO & Digital-Trust Engineering',
+      icon: Network,
+      description: 'Model-driven DAO development, governance and token-economy design, smart-contract generation, and decentralized identity.',
+      items: ['DAO-ML & ET-DM modeling', 'Governance & tokenomics', 'Smart-contract generation & audit', 'DID / verifiable credentials']
+    },
+    {
+      name: 'Artificial Intelligence & Autonomous Systems',
+      icon: Brain,
+      description: 'Machine learning, explainable AI, NLP, and multi-agent automation applied to real organizational and market problems.',
+      items: ['Applied ML & explainable AI', 'NLP & knowledge graphs', 'Multi-agent & AI agents', 'Edge / TinyML']
+    },
+    {
+      name: 'Cybersecurity, Verification & Software Assurance',
+      icon: Shield,
+      description: 'Formal methods, threat modeling, and smart-contract security to keep systems resilient under adversarial conditions.',
+      items: ['Formal verification', 'Threat modeling', 'Smart-contract security', 'Technical due diligence']
+    },
+    {
+      name: 'Software, Cloud & Distributed Systems',
+      icon: Code,
+      description: 'Production software engineering, cloud-native architectures, and distributed platforms — from prototype to deployment.',
+      items: ['Full-stack development', 'Cloud & DevOps', 'Distributed architectures', 'Model-driven code generation']
+    },
+    {
+      name: 'Research & Innovation Development',
+      icon: FlaskConical,
+      description: 'Turning peer-reviewed research into funded projects, consortia, and validated proofs of concept.',
+      items: ['Proposal & consortium building', 'Design-science research', 'Proof-of-concept validation', 'Publications & demonstrators']
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-b from-[#0f1629] to-[#131b35] py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-4xl">
-            Our Consulting Units
+            Our Competence Areas
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-[#C3C8E5]">
-            Two dedicated teams of specialists driving innovation in decentralized systems.
+            Five connected areas of expertise, delivered by researchers and engineers who build what they publish.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {units.map((unit) => (
-            <Card key={unit.name} className="flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
+          {areas.map((area) => (
+            <Card key={area.name} className="flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e]">
               <CardHeader className="p-0">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex-shrink-0 p-3 bg-[#18C5FF]/10 rounded-lg">
-                    <unit.icon className="w-8 h-8 text-[#18C5FF]" />
+                    <area.icon className="w-8 h-8 text-[#18C5FF]" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-[#F5F7FF]">{unit.name}</CardTitle>
+                  <CardTitle className="text-xl font-bold text-[#F5F7FF]">{area.name}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="p-0 flex-grow">
-                <p className="text-[#C3C8E5] mb-6 leading-relaxed">{unit.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {unit.services.map((service) => (
-                    <li key={service} className="flex items-start">
+                <p className="text-[#C3C8E5] mb-6 leading-relaxed">{area.description}</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {area.items.map((item) => (
+                    <li key={item} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-[#18C5FF] mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-[#A5AAC9] font-medium">{service}</span>
+                      <span className="text-[#B7BCDB] font-medium text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <div className="mt-auto pt-6 border-t border-[#18C5FF]/20">
-                <Button asChild variant="outline" className="w-full bg-transparent border-[#555B7C] text-white hover:bg-[#555B7C]/20">
-                  <Link to={unit.link}>
-                    Explore Our Services
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button asChild size="lg" variant="outline" className="bg-transparent border-[#555B7C] text-white hover:bg-[#555B7C]/20 rounded-md px-8 py-6 text-base font-semibold">
+            <Link to={createPageUrl('Services')}>
+              Explore Our Capabilities
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
@@ -449,11 +543,12 @@ function ComprehensiveSupport() {
     <div className="bg-gradient-to-b from-[#0f1629] to-[#131b35] py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-4xl">
-            End-to-End DAO and Token Launch Support
-          </h2>
+          <h2 className="text-base text-[#18C5FF] font-semibold tracking-wide uppercase">Flagship Specialization</h2>
+          <p className="mt-2 text-3xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-4xl">
+            End-to-End DAO &amp; Token Engineering
+          </p>
           <p className="mt-3 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
-            From initial concept to fully compliant deployment, we guide your entire DAO journey with comprehensive consulting and hands-on training.
+            Our most established practice: from initial concept to deployment, we guide the full DAO journey with model-driven engineering, hands-on training, and technical support for regulatory alignment.
           </p>
         </div>
 
@@ -469,12 +564,12 @@ function ComprehensiveSupport() {
             </CardHeader>
             <CardContent className="p-0">
               <p className="text-[#C3C8E5] text-lg mb-6 leading-relaxed">
-                We support companies and non-profit organizations in launching tokens and DAOs. Our comprehensive service covers every aspect from conceptual design to implementation and regulatory compliance, ensuring your project meets MiCA requirements and industry best practices.
+                We support companies and non-profit organizations in launching tokens and DAOs, covering conceptual design, implementation, and token-economy modeling. Where regulatory alignment (e.g. MiCA) is in scope, we provide the technical and token-design groundwork and work alongside qualified legal and compliance partners.
               </p>
               <ul className="space-y-3">
                 {[
                   'Token economy design and launch strategy modeling',
-                  'MiCA compliance alignment & regulatory guidance',
+                  'Technical groundwork for MiCA alignment (with legal partners)',
                   'Complete governance architecture development',
                   'Post-launch monitoring & optimization services'
                 ].map((feature) => (
@@ -551,7 +646,7 @@ function OurMethodology() {
             A Research-Backed, Model-Driven Methodology
           </p>
           <p className="mt-4 max-w-4xl mx-auto text-xl text-[#C3C8E5]">
-            We transform complex requirements into secure, production-ready systems by leveraging rigorous academic research results including dedicated tool-support, software engineering methods, languages and models tailored for DAOs and DApp development. Learn more about the software engineering method and DAO development case studies in the defended PhD thesis and publications (<a href="https://tesidottorato.depositolegale.it/bitstream/20.500.14242/214884/1/ilovepdf_merged-8.pdf" target="_blank" rel="noopener noreferrer" className="text-[#18C5FF] hover:text-[#60a5fa] underline font-semibold">Avanzo, 2025</a>).
+            Across every domain we work in, we transform complex requirements into secure, production-ready systems by leveraging rigorous academic research — dedicated tool support, software-engineering methods, languages, and models. Our model-driven approach to DAOs and DApps is one published example; explore the method and case studies in the defended PhD thesis and publications (<a href="https://tesidottorato.depositolegale.it/bitstream/20.500.14242/214884/1/ilovepdf_merged-8.pdf" target="_blank" rel="noopener noreferrer" className="text-[#18C5FF] hover:text-[#60a5fa] underline font-semibold">Avanzo, 2025</a>).
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="outline" className="bg-transparent border-[#555B7C] text-white hover:bg-[#555B7C]/20 rounded-md px-8 py-6 text-base font-semibold">
@@ -587,17 +682,17 @@ function CallToAction() {
       <div className="bg-gradient-to-b from-[#0a0f1e] to-[#050713] py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-[#F5F7FF] sm:text-4xl">
-            <span className="block">Ready to Launch Your DAO?</span>
+            <span className="block">Ready to Build a Trustworthy Digital System?</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-[#C3C8E5]">
-            From concept to compliant deployment, we provide end-to-end support for your decentralized organization. Let's build the future together.
+            Whether it's a blockchain platform, an AI system, a research consortium, or a software-engineering assignment — we take projects from scientific validation to production. Let's build it together.
           </p>
-          <Button 
+          <Button
             onClick={() => setConsultationModalOpen(true)}
-            size="lg" 
+            size="lg"
             className="mt-8 w-full sm:w-auto bg-[#2563FF] hover:bg-[#1d4ed8] text-white"
           >
-            Start Your DAO Journey
+            Discuss a Project
           </Button>
         </div>
       </div>
@@ -613,8 +708,10 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
+      <Capabilities />
+      <EvidenceStrip />
+      <CompetenceAreas />
       <ComprehensiveSupport />
-      <ConsultingUnits />
       <OurMethodology />
       <CallToAction />
     </div>

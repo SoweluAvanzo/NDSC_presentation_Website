@@ -14,6 +14,7 @@ const projects = [
             "Led by the Baltic Film, Media and Arts School (BFM) of Tallinn University, this project builds a linked dataset that unifies Estonian Public Broadcasting (ERR) content, the National Library of Estonia's digital archives, and economic data from Statistics Estonia and Eurostat. Machine learning then derives an economic knowledge graph offering a systematic, longitudinal view of how Estonia's economic and technological development is portrayed in the media and shapes the national innovation system.",
         contribution:
             "We prototyped the MKM DAO — a decentralized autonomous organization that enforces fine-grained access control over the data recorded in the Decentralized Knowledge Graph — and designed and built the NLP pipeline that transforms raw textual articles on the Estonian economy into structured knowledge-graph entries governed by that DAO.",
+        tags: ['Knowledge Graphs', 'NLP / Machine Learning', 'Decentralized Access Control', 'Public-Sector R&I'],
         links: [{ label: 'Tallinn University', href: 'https://www.tlu.ee/en', external: true }],
     },
     {
@@ -25,6 +26,7 @@ const projects = [
             "Travelhive is a DAO-deployment platform that establishes Decentralized Destination Management Organizations (DDMOs), empowering the residents, businesses, and collectives of a region to collaboratively govern local tourism through on-chain deliberation. Its multi-DAO governance structure — spanning distinct roles, committees, and voting protocols — was specified with the DAO-ML visual modeling language and realized as gas-efficient Solidity smart contracts.",
         contribution:
             "As software-development consultants for Travelware S.R.L., we supported the implementation and validation of the smart contracts behind the Travelhive platform, whose DAOs serve as the in-vivo case study of our peer-reviewed GoodIT '25 publication on scalable, model-driven DAO code generation.",
+        tags: ['DAO Systems', 'Model-Driven Development', 'Smart Contracts'],
         links: [
             { label: 'travelware.tech', href: 'https://www.travelware.tech/', external: true },
             { label: 'Related publication', href: '#pub-dao-ml', external: false },
@@ -39,6 +41,7 @@ const projects = [
             "Through a one-year research partnership with JSS University in Noida, India, we collaborate with two post-doctoral researchers on DeFi-focused algorithmic trading strategies. The joint team is supervised by Professor Mayank Singh and comprises Dr. Neha Yadav and Dr. Arun Kumar.",
         contribution:
             "Within this partnership we developed an AI-powered optimizer for Renko-chart-based trading strategies, tuning strategy parameters to prevailing market conditions to improve risk-adjusted performance.",
+        tags: ['AI / Machine Learning', 'DeFi', 'Algorithmic Trading'],
         links: [],
     },
     {
@@ -50,6 +53,7 @@ const projects = [
             "Liquidity Hedge is a smart-contract protocol that lets liquidity providers on concentrated-liquidity market makers transfer the depreciation risk of their positions to risk-taking counterparties in exchange for a fairly priced premium, without relying on external options or perpetual markets. Following a Design Science Research methodology, we specified the protocol's requirements and pricing model and validated a proof-of-concept on a year of live SOL/USDC market data, demonstrating measurable risk reduction and economic sustainability.",
         contribution:
             "We designed the protocol, derived its risk-neutral pricing mechanism and value-neutrality guarantees, and implemented and evaluated the proof-of-concept, which was presented at the DLT2026 workshop in Pula, Italy.",
+        tags: ['DeFi', 'Protocol Design', 'Design-Science Research'],
         links: [{ label: 'Related publication', href: '#pub-liquidity-hedge', external: false }],
     },
 ];
@@ -116,12 +120,12 @@ export default function ProjectsPage() {
             <div className="pt-24 sm:pt-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight text-[#F5F7FF] sm:text-5xl md:text-6xl">
-                        Projects &amp; Publications
+                        Projects, Systems &amp; Research Results
                     </h1>
                     <p className="mt-4 max-w-3xl mx-auto text-xl text-[#C3C8E5]">
                         A selection of the applied-research and engineering projects Norta DeSyCo has delivered
-                        and is actively working on — spanning decentralized knowledge graphs, DAO governance, and
-                        DeFi — together with the peer-reviewed publications they produce.
+                        and is actively working on — spanning AI and NLP, knowledge graphs, DAO governance,
+                        decentralized identity, and DeFi — together with the peer-reviewed publications they produce.
                     </p>
                 </div>
             </div>
@@ -154,6 +158,15 @@ export default function ProjectsPage() {
                                         </CardHeader>
                                         <CardContent className="p-0">
                                             <p className="text-[#C3C8E5] text-lg leading-relaxed">{project.description}</p>
+                                            {project.tags && (
+                                                <div className="mt-5 flex flex-wrap gap-2">
+                                                    {project.tags.map((t) => (
+                                                        <span key={t} className="text-xs font-medium px-2.5 py-1 rounded-full border border-[#18C5FF]/25 text-[#9fb4d8] bg-[#18C5FF]/5">
+                                                            {t}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </CardContent>
                                     </div>
                                     <div className="p-8 bg-[#0a0f1e]/60 flex flex-col">
@@ -229,8 +242,9 @@ export default function ProjectsPage() {
                             Interested in collaborating?
                         </h2>
                         <p className="mt-4 max-w-2xl mx-auto text-lg text-[#C3C8E5]">
-                            We partner with universities, public institutions, and companies on decentralized
-                            governance, knowledge graphs, and DeFi. Let&apos;s discuss how we can help your project.
+                            We partner with universities, public institutions, and companies on AI and data
+                            engineering, blockchain and digital trust, cybersecurity, and applied research.
+                            Let&apos;s discuss how we can help your project.
                         </p>
                         <div className="mt-8">
                             <Link to={createPageUrl('Contact')}>
