@@ -143,20 +143,28 @@ export default function AboutPage() {
                             We deliver alongside universities, public institutions, and industry — the partners behind our funded research and applied projects.
                         </p>
                     </div>
-                    <ul className="flex flex-wrap items-stretch justify-center gap-4">
+                    <ul className="flex flex-wrap items-stretch justify-center gap-4 sm:gap-5">
                         {[
-                            'Tallinn University (BFM)',
-                            'Estonian Ministry of Economic Affairs (MKM)',
-                            'University of Torino',
-                            'JSS University, Noida',
-                            'Travelware S.R.L.',
-                            'IEEE Blockchain (Estonia / Finland)'
-                        ].map((partner) => (
+                            { name: 'Tallinn University', logo: '/media/partners/tallinn-university.png' },
+                            { name: 'University of Turin', logo: '/media/partners/university-turin.png' },
+                            { name: 'Travelware S.R.L.', logo: '/media/partners/travelware.png' },
+                            { name: 'JSS University, Noida' },
+                            { name: 'IEEE Blockchain (Estonia / Finland)' }
+                        ].map((p) => (
                             <li
-                                key={partner}
-                                className="flex items-center rounded-xl border border-[#18C5FF]/20 bg-gradient-to-br from-[#0a1628] to-[#0f1a2e] px-5 py-4 text-sm font-medium text-[#C3C8E5]"
+                                key={p.name}
+                                className="flex h-24 w-44 items-center justify-center rounded-xl bg-white px-6 py-4 shadow-md"
                             >
-                                {partner}
+                                {p.logo ? (
+                                    <img
+                                        src={p.logo}
+                                        alt={`${p.name} logo`}
+                                        loading="lazy"
+                                        className="max-h-14 max-w-full object-contain"
+                                    />
+                                ) : (
+                                    <span className="text-center text-sm font-semibold text-[#0a1628]">{p.name}</span>
+                                )}
                             </li>
                         ))}
                     </ul>
