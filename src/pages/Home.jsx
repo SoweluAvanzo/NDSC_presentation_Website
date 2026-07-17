@@ -430,18 +430,33 @@ function Capabilities() {
 }
 
 function EvidenceStrip() {
-  const items = [
+  const stats = [
+    { value: '11+', label: 'PhD researchers supervised' },
+    { value: '200+', label: 'Peer-reviewed publications' },
+    { value: '3,900+', label: 'Research citations' }
+  ];
+  const tags = [
     'PhD-led engineering',
-    'Peer-reviewed methods',
     'International research partnerships',
     'Industry implementations',
     'Europe & UAE operations'
   ];
   return (
     <div className="bg-[#0f1629] border-y border-[#18C5FF]/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
-          {items.map((item, i) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p className="text-center text-sm font-semibold uppercase tracking-[0.2em] text-[#18C5FF] mb-8">
+          Built on a Deep Research Foundation
+        </p>
+        <dl className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <dt className="text-4xl sm:text-5xl font-extrabold text-[#F5F7FF]">{s.value}</dt>
+              <dd className="mt-2 text-sm text-[#B7BCDB]">{s.label}</dd>
+            </div>
+          ))}
+        </dl>
+        <ul className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+          {tags.map((item, i) => (
             <li key={item} className="flex items-center gap-3">
               {i > 0 && <span className="hidden sm:inline text-[#18C5FF]/40" aria-hidden="true">•</span>}
               <span className="text-sm font-medium tracking-wide text-[#C3C8E5]">{item}</span>
