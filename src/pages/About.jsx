@@ -9,13 +9,13 @@ const modelDrivenEngineeringTeam = [
 },
 {
   name: 'Sowelu Avanzo, PhD',
-  role: 'Owner & CTO',
+  role: 'Owner, CTO, Software Architect & Developer',
   imageUrl: '/media/53114f37d_profile-pic-Sowelu.png',
   bio: 'Research fellow in Computer Science at the University of Torino, Italy, MSc in Finance. PhD thesis on Model Driven Development for DAOs. Developed the first modeling languages for designing organizational structures and token economies of DAOs. Expert in network analysis of blockchain-based systems.'
 },
 {
   name: 'Marco Ottina, MSc',
-  role: 'Owner & DAO Development Consultant',
+  role: 'Owner & Lead Software Developer',
   imageUrl: '/media/6b7777576_profile-pic-Marco.png',
   bio: 'Full-stack developer and Software Engineer, with a wide background in Artificial Intelligence (competencies in Distributed and Multi-Agent Systems, interested in Economic Systems formalization).'
 }];
@@ -87,21 +87,20 @@ export default function AboutPage() {
                                     Focused on applying Model-Driven Engineering to design, validate, formally verify and implement complex blockchain-enabled systems. This unit specializes in creating robust methodologies that ensure the reliability and correctness of decentralized autonomous organizations through rigorous mathematical modeling and automated verification processes.
                                 </p>
                             </div>
-                            <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+                            <ul role="list" className="mx-auto max-w-3xl space-y-4">
                                 {modelDrivenEngineeringTeam.map((person) =>
-    <li key={person.name} className="space-y-4">
-                                        <div className="mx-auto w-32 h-32 overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
-                                            <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
-                                        </div>
-                                        <div className="text-lg leading-6 font-medium space-y-1">
-                                            <h3 className="text-[#F5F7FF]">{person.name}</h3>
-                                            <p className="text-[#18C5FF]">{person.role}</p>
-                                        </div>
-                                        <div className="text-base">
-                                            <p className="text-[#C3C8E5]">{person.bio}</p>
+                                    <li key={person.name} className="flex flex-col items-center gap-6 rounded-2xl border border-[#18C5FF]/10 bg-[#0a1628]/60 p-6 text-center sm:flex-row sm:items-start sm:text-left">
+                                        <img
+                                            className="h-32 w-32 flex-shrink-0 rounded-full bg-[#0a1628] object-cover object-top shadow-lg ring-2 ring-[#18C5FF]/30"
+                                            src={person.imageUrl} alt={`Profile of ${person.name}`} loading="lazy" width="128" height="128"
+                                        />
+                                        <div>
+                                            <h3 className="text-xl font-semibold text-[#F5F7FF]">{person.name}</h3>
+                                            <p className="text-sm font-medium text-[#18C5FF]">{person.role}</p>
+                                            <p className="mt-2 text-base leading-relaxed text-[#C3C8E5]">{person.bio}</p>
                                         </div>
                                     </li>
-    )}
+                                )}
                             </ul>
                         </div>
 
@@ -113,21 +112,20 @@ export default function AboutPage() {
                                     Specializes in predictive analytics for tokenomics, custom algorithmic trading strategy development, risk management and performance optimization frameworks, decentralized multi-agent system development, and economic sustainability analysis of crypto projects. This unit combines advanced machine learning techniques with deep financial expertise to create intelligent, data-driven solutions for the DeFi ecosystem.
                                 </p>
                             </div>
-                            <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+                            <ul role="list" className="mx-auto max-w-3xl space-y-4">
                                 {defiMLTeam.map((person) =>
-    <li key={person.name} className="space-y-4">
-                                        <div className="mx-auto w-32 h-32 overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
-                                            <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
-                                        </div>
-                                        <div className="text-lg leading-6 font-medium space-y-1">
-                                            <h3 className="text-[#F5F7FF]">{person.name}</h3>
-                                            <p className="text-[#18C5FF]">{person.role}</p>
-                                        </div>
-                                        <div className="text-base">
-                                            <p className="text-[#C3C8E5]">{person.bio}</p>
+                                    <li key={person.name} className="flex flex-col items-center gap-6 rounded-2xl border border-[#18C5FF]/10 bg-[#0a1628]/60 p-6 text-center sm:flex-row sm:items-start sm:text-left">
+                                        <img
+                                            className="h-32 w-32 flex-shrink-0 rounded-full bg-[#0a1628] object-cover object-top shadow-lg ring-2 ring-[#18C5FF]/30"
+                                            src={person.imageUrl} alt={`Profile of ${person.name}`} loading="lazy" width="128" height="128"
+                                        />
+                                        <div>
+                                            <h3 className="text-xl font-semibold text-[#F5F7FF]">{person.name}</h3>
+                                            <p className="text-sm font-medium text-[#18C5FF]">{person.role}</p>
+                                            <p className="mt-2 text-base leading-relaxed text-[#C3C8E5]">{person.bio}</p>
                                         </div>
                                     </li>
-    )}
+                                )}
                             </ul>
                         </div>
                     </div>
