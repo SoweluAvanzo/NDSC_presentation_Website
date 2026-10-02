@@ -90,7 +90,7 @@ export default function AboutPage() {
                             <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                                 {modelDrivenEngineeringTeam.map((person) =>
     <li key={person.name} className="space-y-4">
-                                        <div className="w-full aspect-square overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
+                                        <div className="mx-auto w-40 h-40 overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
                                             <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
                                         </div>
                                         <div className="text-lg leading-6 font-medium space-y-1">
@@ -116,7 +116,7 @@ export default function AboutPage() {
                             <ul role="list" className="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                                 {defiMLTeam.map((person) =>
     <li key={person.name} className="space-y-4">
-                                        <div className="w-full aspect-square overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
+                                        <div className="mx-auto w-40 h-40 overflow-hidden bg-[#0a1628] rounded-xl shadow-lg ring-1 ring-[#18C5FF]/20">
                                             <img className="w-full h-full object-cover object-top" src={person.imageUrl} alt={`Profile of ${person.name}`} />
                                         </div>
                                         <div className="text-lg leading-6 font-medium space-y-1">
