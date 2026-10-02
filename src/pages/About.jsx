@@ -35,10 +35,10 @@ const defiMLTeam = [
   bio: 'PhD researcher at the University of Turin specializing in Explainable AI (XAI), anomaly detection, and precise object localization. He builds explainable anomaly-detection pipelines for transactions, graphs, and images, combining cutting-edge research with practical deployment to create trustworthy AI systems for real-world applications.'
 },
 {
-  name: 'Luca Pennella, PhD Candidate',
+  name: 'Luca Pennella, PhD',
   role: 'DeFi & Blockchain Analytics Researcher',
   imageUrl: '/media/2a3eb62a0_ProfilePicLucaPennella.jpeg',
-  bio: 'PhD candidate in Applied Data Science and AI at the University of Trieste and a Guest Scholar at IMT of Lucca. His research focuses on Machine Learning applications in DeFi, Blockchain, and survey data, with a particular focus on explainable AI. Brings over three years of experience in data analysis from various consulting firms in Italy.'
+  bio: 'PhD in Applied Data Science and AI at the University of Trieste and a Guest Scholar at IMT of Lucca. His research focuses on Machine Learning applications in DeFi, Blockchain, and survey data, with a particular focus on explainable AI. Brings over three years of experience in data analysis from various consulting firms in Italy.'
 }];
 
 
